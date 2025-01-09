@@ -17,7 +17,7 @@ def main():
 
     print("Welcome to Iya Moses Pizza joint!\n")
 
-    # Input
+
     try:
         number_of_guests = int(input("Enter the number of guests: "))
         
@@ -32,7 +32,7 @@ def main():
             print("Invalid pizza choice. Please restart the program.")
             return
 
-        # Calculations
+        
         slices_per_guest = 1  # Assumes each guest gets 1 slice
         total_slices_needed = number_of_guests * slices_per_guest
         slices_per_box_chosen = slices_per_box[pizza_choice]
@@ -43,7 +43,7 @@ def main():
         leftover_slices = total_slices - total_slices_needed
         total_price = boxes_needed * price_per_box_chosen
 
-        # Output
+    
         print("\nOrder Summary:")
         print(f"Number of boxes of pizza to buy: {boxes_needed} box(es)")
         print(f"Number of leftover slices: {leftover_slices} slice(s)")
