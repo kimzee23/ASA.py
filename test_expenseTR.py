@@ -1,18 +1,22 @@
 import unittest
 import expenseTR
 
-class Test_Expense_TR(unittest.TestCase):
+class TestExpenseTracker(unittest.TestCase):
     def test_add_expense_success(self):
         expenses = []
         result = expenseTR.add_expense(expenses, "20250223", "Groceries", "5000")
         self.assertEqual(result, "Expense added successfully!")
         self.assertEqual(len(expenses), 1)
         self.assertEqual(expenses[0], [20250223, "Groceries", 5000])
+
+    #def test_for_menu(self):
+    #result = expenseTR.main_test(display_menu)
+    #self.assertEqual(result)
     
     def test_add_expense_invalid_amount(self):
         expenses = []
         result = expenseTR.add_expense(expenses, "20250223", "Groceries", "kolajo")
-        self.assertEqual(result, "Invalid amount and Date entered . Please enter a number.")
+        self.assertEqual(result, "Invalid amount or Date entered . Please enter a number.")
         self.assertEqual(len(expenses), 0)
     
     def test_view_expenses_empty(self):
