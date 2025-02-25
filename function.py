@@ -21,11 +21,11 @@ print(element_in_list([1, 2, 3, 4], 3))
 
 print("="*45)
 def odd_position_elements(lst):
-    return [lst[i] for i in range(0, len(lst), 2)]
+    return [lst[item] for item in range(0, len(lst), 2)]
 print(odd_position_elements([1, 2, 3, 4, 5]))  
 print("="*45)
 def even_position_elements(lst):
-    return [lst[i] for i in range(1, len(lst), 2)]
+    return [lst[item] for item in range(1, len(lst), 2)]
 print(even_position_elements([1, 2, 3, 4, 5])) 
 
 print("="*45)
@@ -54,10 +54,10 @@ print(sum_for_loop([1, 2, 3]))
 print("="*45)
 def sum_while_loop(lst):
     total = 0
-    i = 0
-    while i < len(lst):
-        total += lst[i]
-        i += 1
+    item = 0
+    while item < len(lst):
+        total += lst[item]
+        item += 1
     return total
 print(sum_while_loop([1, 2, 3])) 
 
@@ -70,9 +70,9 @@ print("="*45)
 def alternate_merge(lst1, lst2):
     result = []
     length = min(len(lst1), len(lst2))  
-    for i in range(length):
-        result.append(lst1[i])
-        result.append(lst2[i])
+    for item in range(length):
+        result.append(lst1[item])
+        result.append(lst2[item])
     result.extend(lst1[length:] + lst2[length:])  
     return result
 print(alternate_merge(['a', 'b', 'c'], [1, 2, 3])) 
